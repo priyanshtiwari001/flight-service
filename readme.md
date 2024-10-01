@@ -3,6 +3,7 @@ Router object --> it is a instance of the router  and register the middleware an
 
 
 Commands:
+  ```
   sequelize db:migrate                        Run pending migrations -> jo bhi migration folder main h vo apply kr deta h
   sequelize db:migrate:schema:timestamps:add  Update migration table to have timestamps
   sequelize db:migrate:status                 List the status of all migrations
@@ -25,3 +26,6 @@ Commands:
   sequelize model:create                      Generates a model and its migration
   sequelize seed:generate                     Generates a new seed file
   sequelize seed:create                       Generates a new seed file
+
+```
+
