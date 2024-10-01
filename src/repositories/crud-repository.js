@@ -1,65 +1,60 @@
+const { NOT_FOUND } = require('http-status-codes');
 const {Logger} = require('../config');
+const AppErrors = require('../utils/error/app-erros');
 class CrudRepository{
     constructor(model){
         this.model=model
     }
 
    async create(data){ // data -> col:val --> modelName:'ANB_123'
-        try {
+       
             const response = await this.model.create(data);
             return response;
-        } catch (error) {
-            Logger.error('Something went wrong in the crud repository:create');
-            throw error;
-        }
+        
     }
 
     async destroy(data){ // data -> col:val --> modelName:'ANB_123'
-        try {
+       
             const response = await this.model.destroy({
                 where:{
                     id:data
                 }
             });
-            return response;
-        } catch (error) {
-            Logger.error('Something went wrong in the crud repository:destroy');
-            throw error;
-        }
+            if(!response){
+                throw new AppErrors('Not able to find the resources',NOT_FOUND);
+            }
+       return response;
     }
 
     async getAll(){ // data -> col:val --> modelName:'ANB_123'
-        try {
+       
             const response = await this.model.findAll();
             return response;
-        } catch (error) {
-            Logger.error('Something went wrong in the crud repository:getAll');
-            throw error;
-        }
+        
     }
 
     async get(data){ // data -> col:val --> modelName:'ANB_123'
-        try {
+       
             const response = await this.model.findByPk(data);
+            if(!response){
+                throw new AppErrors('Not able to find the resources',NOT_FOUND);
+            }
             return response;
-        } catch (error) {
-            Logger.error('Something went wrong in the crud repository:create');
-            throw error;
-        }
+        
     }
 
-    async update(val,data){ // data -> col:val --> modelName:'ANB_123'
-        try {
+    async update(id,data){ // data -> col:val --> modelName:'ANB_123'
+       
             const response = await this.model.update(data,{
                 where:{
-                    id:val
+                    id:id
                 }
             });
+           if(!response[0]){
+            throw new AppErrors('Not able to find the resources',NOT_FOUND);
+           }
             return response;
-        } catch (error) {
-            Logger.error('Something went wrong in the crud repository:create');
-            throw error;
-        }
+        
     }
 
 

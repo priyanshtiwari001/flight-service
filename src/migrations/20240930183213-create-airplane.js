@@ -11,11 +11,18 @@ module.exports = {
       },
       modelName: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull:false,
+        validate:{
+          isAlphanumeric:true,
+        }
 
       },
       capacity: {
         type: Sequelize.INTEGER,
+        allowNull:false,
+        validate:{
+          max:2000
+        }
         
       },
       createdAt: {

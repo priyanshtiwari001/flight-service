@@ -2,3 +2,26 @@
 2024-09-22 08:47:02 : error: Something went wrong in the airplane-service:createAirplane
 2024-09-23 11:36:36 : error: Something went wrong in the crud repository:create
 2024-09-23 11:36:36 : error: Something went wrong in the airplane-service:createAirplane
+2024-10-01 00:55:07 : error: Something went wrong in the crud repository:create
+2024-10-01 00:55:07 : error: Something went wrong in the airplane-service:createAirplane
+2024-10-01 00:56:11 : error: Something went wrong in the crud repository:create
+2024-10-01 00:56:11 : error: Something went wrong in the airplane-service:createAirplane
+2024-10-01 00:59:00 : error: Something went wrong in the crud repository:create
+2024-10-01 00:59:00 : error: Something went wrong in the airplane-service:createAirplane
+2024-10-01 01:03:56 : error: Something went wrong in the crud repository:create
+2024-10-01 01:03:56 : error: Something went wrong in the airplane-service:createAirplane
+2024-10-01 01:23:46 : error: Something went wrong in the crud repository:create
+2024-10-01 01:23:46 : error: Something went wrong in the airplane-service:createAirplane
+2024-10-01 01:25:51 : error: Something went wrong in the airplane-service:createAirplane
+2024-10-01 12:48:30 : error: Something went wrong in the airplane-service:destroyAirline
+2024-10-01 12:59:02 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 12:59:42 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 13:01:20 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 13:05:07 : error: Something went wrong in the airplane-service:getAirplane
+2024-10-01 13:09:55 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 22:03:02 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 22:03:22 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 22:05:03 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 22:08:07 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 22:13:46 : error: Something went wrong in the airplane-service:updateAirline
+2024-10-01 22:18:01 : error: Something went wrong in the airplane-service:updateAirline
