@@ -2,7 +2,7 @@ const { BAD_REQUEST, INTERNAL_SERVER_ERROR, NOT_FOUND } = require('http-status-c
 const { Logger } = require('../config');
 const {AirplaneRepository} = require('../repositories');
 const AppErrors = require('../utils/error/app-erros');
-const e = require('express');
+
 
 const airplaneRepo = new AirplaneRepository();
 

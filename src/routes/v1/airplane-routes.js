@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const {AirplaneController} = require('../../controllers');
+const { AirplaneMiddleware } = require('../../middlewares');
 
 
 
 //* api/v1/airplanes : POST
- router.post('/',AirplaneController.createAirplane);
+ router.post('/',AirplaneMiddleware.validateRequest, AirplaneController.createAirplane);
 
 
  //* api/v1/airplanes/:id : DELETE
