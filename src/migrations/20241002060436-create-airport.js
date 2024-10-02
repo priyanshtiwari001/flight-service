@@ -20,11 +20,12 @@ module.exports = {
         allowNull:false
       },
       address: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique:true,
       },
       cityId: {
         type: Sequelize.INTEGER,
-        allowNull:false
+        
       },
       createdAt: {
         allowNull: false,

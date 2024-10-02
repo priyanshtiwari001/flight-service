@@ -14,29 +14,37 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('Cities',[{
-      name:'Delhi',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    },
+   await queryInterface.bulkInsert('Airports',[
     {
-      name:'Mumbai',
+      name:'Indira Gandhi International Airport',
+      code:'DEL',
       createdAt: new Date(),
       updatedAt: new Date()
-    },
-    {
-      name:'Kolkata',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    },
-    {
-      name:'Hyderabad',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    },
-   
-    ])
 
+    },
+    {
+      name:'Chhatrapati Shivaji Maharaj International Airport',
+      code:'BOM',
+      createdAt: new Date(),
+      updatedAt: new Date()
+      
+    },
+    {
+      name:'Netaji Subhash Chandra Bose International Airport',
+      code:'CCU',
+      createdAt: new Date(),
+      updatedAt: new Date()
+      
+    },
+    {
+      name:'Rajiv Gandhi International Airport',
+      code:'HYD',
+      createdAt: new Date(),
+      updatedAt: new Date()
+      
+    },
+    
+   ])
   },
 
   async down (queryInterface, Sequelize) {
@@ -46,21 +54,16 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
+    await queryInterface.bulkDelete('Airports',{
 
-    await queryInterface.bulkDelete('Cities',{
       [Op.or]:[
-        {
-          name:'Bihar'
-        },
-        {
-          name:'Patna'
-        },
-        {
-          name:'Mumbai'
-        },
-        {
-          name:'Varansi'
-        }
+        {code:'DEL'},
+        {code:'BOM'},
+        { code:'CCU',},
+        { code:'HYD'},
+       
+
+
       ]
     })
   }
