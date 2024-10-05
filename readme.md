@@ -29,3 +29,8 @@ Commands:
 
 ```
 
+  npx sequelize model:generate --name City --attributes name:string;
+  npx sequelize seed:generate --name add-cities
+  sequelize db:seed --seed my_seeder_file.js
+
+  npx sequelize model:generate --name Flight --attributes flightNumber:string,airplaneId:string,departureAirportId:string,arrivalAirportId:string,arrivalTime:date,departureTime:date,price:integer,boardingGate:string,totalSeats:integer
